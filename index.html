@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChatReel AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>ChatReel AI 🎬</h1>
+    <p>Create chat stories, scary videos, monkey vlogs & more</p>
+  </header>
+
+  <main>
+    <section id="theme-section">
+      <h2>Select Theme</h2>
+      <select id="themeSelect">
+        <option value="chat">Chat Story</option>
+        <option value="reddit">Reddit Story</option>
+        <option value="scary">Scary Story</option>
+        <option value="monkey">Monkey Vlog</option>
+      </select>
+    </section>
+
+    <section id="script-section">
+      <h2>Write or Generate Script</h2>
+      <textarea id="scriptInput" placeholder="Write your story here..."></textarea>
+      <button onclick="generateScript()">AI Generate Script</button>
+    </section>
+
+    <section id="audio-section">
+      <h2>Voiceover</h2>
+      <select id="voiceSelect">
+        <option value="adam">Adam (Male)</option>
+        <option value="eva">Eva (Female)</option>
+        <option value="oldman">Old Man</option>
+        <option value="kid">Kid</option>
+      </select>
+      <button onclick="generateVoice()">Generate Voice</button>
+      <input type="file" id="customAudio" accept="audio/*" />
+    </section>
+
+    <section id="media-section">
+      <h2>Upload Gameplay Video</h2>
+      <input type="file" id="bgVideo" accept="video/*" />
+    </section>
+
+    <section id="generate-section">
+      <button onclick="previewVideo()">Preview Video</button>
+      <button onclick="downloadVideo()">Download</button>
+    </section>
+
+    <section id="preview">
+      <h3>Preview Area</h3>
+      <div id="previewOutput"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built with ❤️ by ChatReel AI</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="voices.js"></script>
+</body>
+</html>
